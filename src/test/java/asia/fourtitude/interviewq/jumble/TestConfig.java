@@ -7,10 +7,8 @@ import asia.fourtitude.interviewq.jumble.core.JumbleEngine;
 
 @TestConfiguration
 public class TestConfig {
-
-    @Bean
-    public JumbleEngine jumbleEngine() {
-        return new JumbleEngine();
-    }
-
+	@Bean
+	JumbleEngine jumbleEngine() {
+		return new JumbleEngine();
+	}
 }

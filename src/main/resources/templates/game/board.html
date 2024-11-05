@@ -44,6 +44,12 @@
                         </div>
                         <label th:if="${#fields.hasErrors('word')}" th:errors="*{word}" id="iptWordFeedback" class="col-sm-4 text-danger is-invalid">Word Error</label>
                     </div>
+                    <div class="row mb-3"  th:if="${isError}">
+                    	<span class="text-danger" th:text="${message}"></span>
+                    </div>
+                    <div class="row mb-3"  th:if="!${isError}">
+                    	<span class="text-success" th:text="${message}"></span>
+                    </div>
                     <div class="row mb-3">
                         <span class="col-sm-2"></span>
                         <div class="col-sm-6">

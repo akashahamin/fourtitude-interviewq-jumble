@@ -46,10 +46,12 @@
                     </div>
                 </form>
             </div>
+            <div th:if="${isError}" class="text-danger">Error: <span th:text="${errorMessage}"></span></div>
             <div class="bg-light rounded h-100 p-4" th:if="${form.words != null}">
                 <p>The number of words: <span th:text="${form.words.size()}"></span></p>
                 <ol>
                     <li th:each="word: ${form.words}"><span th:text="${word}"></span></li>
+                    
                 </ol>
             </div>
         </div>

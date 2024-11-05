@@ -34,6 +34,7 @@
             </div>
             <div class="bg-light rounded h-100 p-4">
                 <p th:if="${!#strings.isEmpty(form.scramble)}">Scrambled word: <span th:text="${form.scramble}"></span></p>
+                <p th:if="${isError}" class="text-danger">Error: <span th:text="${errorMessage}"></span></p>
             </div>
         </div>
     </div>
